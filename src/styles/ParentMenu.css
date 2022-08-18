@@ -11,10 +11,14 @@
   cursor: pointer;
 }
 
-body {background-color: #16357B;}
+  .ParentMenu {background-color: #16357B;
+    height: 100vh;
+  }
+
 h1 {
   color: white;
   text-align: center;
+  margin: 0%;
 }
 
 .button1 {
