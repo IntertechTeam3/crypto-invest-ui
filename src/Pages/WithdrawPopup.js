@@ -17,7 +17,7 @@ const layout = {
     },
   };
 
-const ChildList = () => {
+const WithdrawPopup = () => {
 
     const [isModalVisible, setIsModalVisible] = useState(false);
     const [form] = Form.useForm();
@@ -45,12 +45,20 @@ const ChildList = () => {
         <div>
 
             <Button type="primary" onClick={showModal}>
-             Add Children
+             Withdraw
             </Button>
 
-        <Modal title="Add Children" visible={isModalVisible} cancelText="Cancel" okText="submit" onOk={handleOk} onCancel={handleCancel}>
+        <Modal title="Withdraw" visible={isModalVisible} cancelText="Cancel" okText="Withdraw" onOk={handleOk} onCancel={handleCancel}>
             
             <Form {...layout} form={form} name="control-hooks" onFinish={onFinish}>
+
+            <Form.Item name="Balance" label="Balance" rules={[{required: true,},]}>
+            <Input />
+            </Form.Item>
+
+            <Form.Item name="Amount" label="Amount" rules={[{required: true, message: 'Please input your amount!'},]}>
+            <Input />
+            </Form.Item>
 
             <Form.Item name="Name" label="Name" rules={[{required: true, message: 'Please input your name!',},]}>
             <Input />
@@ -60,18 +68,13 @@ const ChildList = () => {
             <Input />
             </Form.Item>
 
-            <Form.Item name="Address" label="Address" rules={[{required: true, message: 'Please input your address!'},]}>
+            <Form.Item name="Address" label="Address" rules={[{required: true,},]}>
             <Input />
             </Form.Item>
-
-            <Form.Item name="Date Of Birth"label="Date Of Birth" rules ={[{required: true, message: 'Please input your date of birth!'},]}>
-            <DatePicker />
-            </Form.Item>
-            
             </Form>
 
         </Modal>      
         </div>
     );
 }
-export default ChildList;
+export default WithdrawPopup;

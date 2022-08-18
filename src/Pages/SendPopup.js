@@ -17,7 +17,7 @@ const layout = {
     },
   };
 
-const ChildList = () => {
+const SendPopup = () => {
 
     const [isModalVisible, setIsModalVisible] = useState(false);
     const [form] = Form.useForm();
@@ -45,27 +45,28 @@ const ChildList = () => {
         <div>
 
             <Button type="primary" onClick={showModal}>
-             Add Children
+             Send
             </Button>
 
-        <Modal title="Add Children" visible={isModalVisible} cancelText="Cancel" okText="submit" onOk={handleOk} onCancel={handleCancel}>
+        <Modal title="Send" visible={isModalVisible} cancelText="Cancel" okText="Send" onOk={handleOk} onCancel={handleCancel}>
             
             <Form {...layout} form={form} name="control-hooks" onFinish={onFinish}>
 
-            <Form.Item name="Name" label="Name" rules={[{required: true, message: 'Please input your name!',},]}>
+            <Form.Item name="From" label="From" rules={[{required: true,},]}>
             <Input />
             </Form.Item>
 
-            <Form.Item name="Surname" label="Surname" rules={[{required: true, message: 'Please input your surname!'},]}>
+            <Form.Item name="To" label="To" rules={[{required: true,},]}>
             <Input />
             </Form.Item>
 
-            <Form.Item name="Address" label="Address" rules={[{required: true, message: 'Please input your address!'},]}>
-            <Input />
-            </Form.Item>
 
-            <Form.Item name="Date Of Birth"label="Date Of Birth" rules ={[{required: true, message: 'Please input your date of birth!'},]}>
+            <Form.Item name="Date Of Transaction"label="Date Of Transaction" rules ={[{required: true, message: 'Please input your date of transaction!'},]}>
             <DatePicker />
+            </Form.Item>
+
+            <Form.Item name="Amount" label="Amount" rules={[{required: true, message: 'Please input your amount!'},]}>
+            <Input />
             </Form.Item>
             
             </Form>
@@ -74,4 +75,4 @@ const ChildList = () => {
         </div>
     );
 }
-export default ChildList;
+export default SendPopup;
