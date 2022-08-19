@@ -100,18 +100,18 @@ else{
         Connect Wallet
         </button>
         <Modal className='modal' title="Warning" visible={isModalVisible} onOk={handleOk} onCancel={handleCancel}>
-        <form>
-          <h4>You will be connected your metamask account.Dou you want to continue?</h4>
-          <label>Name : </label>
-          <input type="text" onChange={(event) => {
+          <form>
+           <h4>You will be connected your metamask account.Dou you want to continue?</h4>
+            <label>Name : </label>
+            <input type="text" onChange={(event) => {
                  
               setName(event.target.value);
               console.log(name);
-          }} />
-          <label> Surname : </label>
-          <input type="text" />
-        </form>
-      </Modal>
+            }} />
+            <label> Surname : </label>
+            <input type="text" />
+          </form>
+        </Modal>
       </div>
     );
   }
