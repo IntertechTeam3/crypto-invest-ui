@@ -1,0 +1,54 @@
+.parentpage{
+    background-color: #16357B;
+    
+    height:100vh;
+    
+    
+}
+
+.account {
+    position: absolute;
+    right: 200px;
+    top: 25px;
+}
+
+.number {
+    position: absolute;
+    font-size: medium;
+    right: 250px;
+    top: 75px;
+}
+
+.balanceimg {
+    align-items: center;
+    height: 250px;
+    width: 250px;
+    position: absolute;
+    bottom: 200px;
+    left: 300px;
+}
+
+.calender{
+    align-items: center;
+    height: 250px;
+    width: 250px;
+    position: absolute;
+    bottom: 200px;
+    right: 300px;
+
+}
+
+.withdrawbut{
+    align-items: center;
+    position: absolute;
+    bottom: 200px;
+    left: 700px;
+    border-radius: 5cm;
+    height: 50px;
+    width: 100px;
+    background-color: black;
+    color: white;
+    font-size: large
+    
+    
+}
