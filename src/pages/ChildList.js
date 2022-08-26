@@ -50,19 +50,43 @@ const ChildList = () => {
     setIsModalVisible(false);
   };
 
-  const onFinish = (values) => {
+  const loadChild = async () => {
+    try {
+      const res = await getChildsFromParent();
+      setChildsArray(
+        res.map((x) => ({
+          ...x,
+          balance: x.balance.toString(),
+          accessDateTimeStamp: dayjs
+            .unix(x.accessDateTimeStamp)
+            .format("DD/MM/YYYY"),
+          dateOfBirthTimeStamp: dayjs
+            .unix(x.dateOfBirthTimeStamp)
+            .format("DD/MM/YYYY"),
+        }))
+      );
+      console.log(childsArray);
+    } catch {
+      console.log(console.error());
+    }
+  };
+
+  const onFinish = async (values) => {
     console.log("Success", values);
     console.log(values.childFirstName);
-    addChild(
+    await addChild(
       values.childAddress,
       values.childFirstName,
       values.childLastName,
       dateOfBirth,
       accessDateOfBirth
     );
-    getChild(values.childAddress);
     form.resetFields();
     setIsModalVisible(false);
+    //loadChild();
+    setChildsArray((prev) => {
+      return [...prev, {firstName: values.childFirstName, lastName: values.childLastName} ];
+    })
   };
 
   const onFinishFailed = (errorInfo) => {
@@ -70,26 +94,6 @@ const ChildList = () => {
   };
 
   useEffect(() => {
-    const loadChild = async () => {
-      try {
-        const res = await getChildsFromParent();
-        setChildsArray(
-          res.map((x) => ({
-            ...x,
-            balance: x.balance.toString(),
-            accessDateTimeStamp: dayjs
-              .unix(x.accessDateTimeStamp)
-              .format("DD/MM/YYYY"),
-            dateOfBirthTimeStamp: dayjs
-              .unix(x.dateOfBirthTimeStamp)
-              .format("DD/MM/YYYY"),
-          }))
-        );
-        console.log(childsArray);
-      } catch {
-        console.log(console.error());
-      }
-    };
     loadChild();
   }, []);
 

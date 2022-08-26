@@ -79,7 +79,6 @@ export const addChild = async (
   _dateOfBirth,
   _accessDate
 ) => {
-  console.log("addChild");
   const tx = await contract.addChild(
     _adres,
     _firstName,
@@ -87,9 +86,8 @@ export const addChild = async (
     _dateOfBirth,
     _accessDate
   );
-  console.log(tx);
-  console.log("added Child");
-  const parent = await contract.getParent();
+  await tx.wait();
+
 };
 
 export const getChildsFromParent = async () => {
@@ -99,19 +97,19 @@ export const getChildsFromParent = async () => {
   return childArray;
 };
 
-export const storeETH = async (address,amount)=>{
-  console.log(address," ",amount);
-  const store=await contract.storeETH(address,{value:amount});
+export const storeETH = async (address, amount) => {
+  console.log(address, " ", amount);
+  const store = await contract.storeETH(address, { value: amount });
   console.log(store);
 }
 
-export const parentWithdraw = async (address,amount)=>{
-  console.log(address," ",amount);
-  const withdraw=await contract.parentWithdraw(address,amount);
+export const parentWithdraw = async (address, amount) => {
+  console.log(address, " ", amount);
+  const withdraw = await contract.parentWithdraw(address, amount);
   console.log(withdraw);
 }
 
-export const childWithdraw = async (date)=>{
-  const withdraw=await contract.childWithdraw(date);
+export const childWithdraw = async (date) => {
+  const withdraw = await contract.childWithdraw(date);
   console.log(withdraw);
 }
