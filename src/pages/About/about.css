@@ -1,0 +1,285 @@
+.homebutton {
+    font-size: 15px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    border-radius: 5cm;
+    background-color: #F89C35;
+    color: white;
+    height: 55px;
+    width: 150px;
+    border-color: #F89C35;
+    float: right;
+    margin-top: 5px;
+    line-height: 5px;
+  }
+  .legacy{
+    left: 10px;
+    color: #001E6C;
+  }
+  .home {
+    background-color: #001E6C;
+    height: 100vh;
+  }
+  .home2 {
+    background-color: #001E6C;
+    height: 30vh;
+  }
+  .h1 {
+    
+    color: white;
+  }
+  h2{
+   
+    color: white;
+  }
+.question{
+    position: absolute;
+    top: 140px;
+    left: 550px;
+    font-size: 30px;
+}
+.collapse{
+    width: 100%;
+    position: absolute;
+    top: 320px;
+    font-size: 20px;
+    background-color: #5089C6;
+    color: white;
+}
+.facebooklogo {
+    height: 35px;
+    width: 35px;
+    background-image: url(./Facebook.png);
+    background-size: cover;
+  }
+  
+  .instagramlogo {
+    height: 35px;
+    width: 35px;
+    background-image: url(./Facebook.png);
+    background-size: cover;
+  }
+  
+  .twitterlogo {
+    height: 35px;
+    width: 35px;
+    background-image: url(./Facebook.png);
+    background-size: cover;
+  }
+  
+  .youtubelogo {
+    height: 35px;
+    width: 35px;
+    background-image: url(./Facebook.png);
+    background-size: cover;
+  }
+  
+  .linkedinlogo {
+    height: 35px;
+    width: 35px;
+    background-image: url(./Facebook.png);
+    background-size: cover;
+  }
+  .team {
+    position: absolute;
+    top: 800px;
+    left: 630px;
+    font-size: 40px;
+  }
+  .oğuzhanbey {
+    height: 30vmin;
+    top: 950px;
+    left: 350px;
+    position: absolute;
+  }
+  .oguzhanozkaya{
+    position: absolute;
+    top: 1200px;
+    left: 350px;
+    font-size: 30px;
+  }
+  .productowner {
+    position: absolute;
+    top: 1240px;
+    left: 397px;
+    font-size: 20px;
+  }
+  .aylinhanım {
+    height: 30vmin;
+    top: 950px;
+    left: 830px;
+    position: absolute;
+  }
+  .aylincelik{
+    position: absolute;
+    top: 1200px;
+    left: 880px;
+    font-size: 30px;
+  }
+  .agilecoach{
+    position: absolute;
+    top: 1240px;
+    left: 897px;
+    font-size: 20px;
+  }
+  .talu {
+    height: 30vmin;
+    top: 1350px;
+    left: 200px;
+    position: absolute;
+  }
+  .taluname{
+    position: absolute;
+    top: 1600px;
+    left: 180px;
+    font-size: 30px;
+  }
+  .bussanaly1{
+    position: absolute;
+    top: 1640px;
+    left: 220px;
+    font-size: 20px;
+  }
+  .elif {
+    height: 30vmin;
+    top: 1350px;
+    left: 650px;
+    position: absolute;
+  }
+  .elifname{
+    position: absolute;
+    top: 1600px;
+    left: 635px;
+    font-size: 30px;
+  }
+  .bussanaly2{
+    position: absolute;
+    top: 1640px;
+    left: 635px;
+    font-size: 20px;
+  }
+  .burak {
+    height: 30vmin;
+    top: 1350px;
+    left: 1000px;
+    position: absolute;
+  }
+  .burakname{
+    position: absolute;
+    top: 1600px;
+    left: 1030px;
+    font-size: 30px;
+  }
+  .fullstack1{
+    position: absolute;
+    top: 1640px;
+    left: 1025px;
+    font-size: 20px;
+  }
+  .furkan {
+    height: 30vmin;
+    top: 1750px;
+    left: 200px;
+    position: absolute;
+  }
+  .furkanname{
+    position: absolute;
+    top: 2000px;
+    left: 145px;
+    font-size: 30px;
+  }
+  .frontenddev1{
+    position: absolute;
+    top: 2040px;
+    left: 200px;
+    font-size: 20px;
+  }
+  .reyta {
+    height: 30vmin;
+    top: 1750px;
+    left: 620px;
+    position: absolute;
+  }
+  .reytaname{
+    position: absolute;
+    top: 2000px;
+    left: 615px;
+    font-size: 30px;
+  }
+  .frontenddev2{
+    position: absolute;
+    top: 2040px;
+    left: 652px;
+    font-size: 20px;
+  }
+  .kıvanc {
+    height: 30vmin;
+    top: 1750px;
+    left: 1080px;
+    position: absolute;
+  }
+  .kıvancname{
+    position: absolute;
+    top: 2000px;
+    left: 1030px;
+    font-size: 30px;
+  }
+  .frontenddev3{
+    position: absolute;
+    top: 2040px;
+    left: 1070px;
+    font-size: 20px;
+  }
+  .arda {
+    height: 30vmin;
+    top: 2180px;
+    left: 200px;
+    position: absolute;
+  }
+  .ardaname{
+    position: absolute;
+    top: 2430px;
+    left: 178px;
+    font-size: 30px;
+  }
+  .backenddev1{
+    position: absolute;
+    top: 2470px;
+    left: 178px;
+    font-size: 20px;
+  }
+  .kubra {
+    height: 30vmin;
+    top: 2180px;
+    left: 620px;
+    position: absolute;
+  }
+  .kubraname{
+    position: absolute;
+    top: 2430px;
+    left: 600px;
+    font-size: 30px;
+  }
+  .backenddev2{
+    position: absolute;
+    top: 2470px;
+    left: 635px;
+    font-size: 20px;
+  }
+  .kuter {
+    height: 30vmin;
+    top: 2180px;
+    left: 1080px;
+    position: absolute;
+  }
+  .kutername{
+    position: absolute;
+    top: 2430px;
+    left: 1100px;
+    font-size: 30px;
+  }
+  .backenddev3{
+    position: absolute;
+    top: 2470px;
+    left: 1090px;
+    font-size: 20px;
+  }
