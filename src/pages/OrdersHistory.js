@@ -6,7 +6,7 @@ import { Link } from "react-router-dom";
 import "./OrdersHistory.css";
 
 const data = [
-    {   
+    {
         key: '1',
         send: 'Send',
         kidName: 'Yılmaz',
@@ -119,7 +119,7 @@ const UsersSearch = () => {
 
     const columns = [
 
-        
+
         {
             title: 'Send',
             dataIndex: 'send',
@@ -157,8 +157,8 @@ const UsersSearch = () => {
         <div>
             <div className="ok" >
 
-            <img src="https://icons.iconarchive.com/icons/cjdowner/cryptocurrency-flat/256/Ethereum-ETH-icon.png"  ></img>
-            
+                <img src="https://icons.iconarchive.com/icons/cjdowner/cryptocurrency-flat/256/Ethereum-ETH-icon.png"  ></img>
+
                 <h1 >
                     ORDERS
                 </h1>
