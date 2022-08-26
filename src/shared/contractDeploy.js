@@ -61,7 +61,7 @@ export const addChild = async (_adres, _firstName, _lastName, _accessDate) => {
     _lastName,
     _accessDate
   );
-  console.log("added Child");
+  await tx;
 };
 
 export const getChildsFromParent = async () => {

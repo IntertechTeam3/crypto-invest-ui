@@ -15,16 +15,6 @@ const ParentMenu = () => {
   const location = useLocation();
   const [parent, setParent] = useState();
 
-
-  const getParentObj = async () => {
-    console.log("parent: ", parent);
-    setParent(await getParent());
-  }
-
-  useEffect(() => {
-    getParentObj();
-  }, []);
-
   return (
     <div className="root">
       <ProfileComponent />

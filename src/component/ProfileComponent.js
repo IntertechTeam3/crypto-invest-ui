@@ -5,13 +5,13 @@ import { getChild, getParent } from "../shared/contractDeploy";
 const ProfileComponent = () => {
     const [user, setUser] = useState();
 
+    const getUser = async () => {
+        const parentProfile = await getParent();
+        const childProfile = await getChild();
+        setUser(parentProfile.firstName != "" ? parentProfile : childProfile);
+    };
 
     useEffect(() => {
-        const getUser = async () => {
-            const parentProfile = await getParent();
-            const childProfile = await getChild();
-            setUser(parentProfile.firstName != "" ? parentProfile : childProfile);
-        };
         getUser();
     }, []);
     return (

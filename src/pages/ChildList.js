@@ -49,6 +49,27 @@ const ChildList = () => {
     setIsModalVisible(false);
   };
 
+  const loadChild = async () => {
+    try {
+      const res = await getChildsFromParent();
+      setChildsArray(
+        res.map((x) => ({
+          ...x,
+          balance: x.balance.toString(),
+          accessDateTimeStamp: dayjs
+            .unix(x.accessDateTimeStamp)
+            .format("DD/MM/YYYY"),
+        }))
+      );
+      console.log(childsArray);
+    } catch {
+      console.log(console.error());
+    }
+  };
+  useEffect(() => {
+    loadChild();
+  }, []);
+
   const onFinish = (values) => {
     console.log("Success", values);
     console.log(values.childFirstName);
@@ -58,35 +79,16 @@ const ChildList = () => {
       values.childLastName,
       accessDateOfBirth
     );
-    getChild(values.childAddress);
     form.resetFields();
     setIsModalVisible(false);
+    loadChild();
   };
 
   const onFinishFailed = (errorInfo) => {
     console.log("Failed:", errorInfo);
   };
 
-  useEffect(() => {
-    const loadChild = async () => {
-      try {
-        const res = await getChildsFromParent();
-        setChildsArray(
-          res.map((x) => ({
-            ...x,
-            balance: x.balance.toString(),
-            accessDateTimeStamp: dayjs
-              .unix(x.accessDateTimeStamp)
-              .format("DD/MM/YYYY"),
-          }))
-        );
-        console.log(childsArray);
-      } catch {
-        console.log(console.error());
-      }
-    };
-    loadChild();
-  }, []);
+
 
   const onChangeDate = (date, dateString) => {
     const accessDate = new Date(dateString);

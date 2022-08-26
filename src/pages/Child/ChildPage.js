@@ -10,32 +10,33 @@ const ChildPage = () => {
   const [date, setDate] = useState();
   const [active, isActive] = useState(true);
 
-  useEffect(() => {
-    const getChildInformations = async () => {
-      try {
-        const res = await getChild();
-        setChild({
-          firstName: res.firstName,
-          lastName: res.lastName,
-          balance: (res.balance || 0).toString(),
-          accessDateTimeStamp: dayjs
-            .unix(res.accessDateTimeStamp)
-            .format("DD/MM/YYYY"),
-          dateOfBirthTimeStamp: dayjs
-            .unix(res.dateOfBirthTimeStamp)
-            .format("DD/MM/YYYY"),
-        });
-        setDate(dayjs().unix());
-        let balanceString = parseInt(res.balance.toString());
-        if (date >= res.accessDateTimeStamp.toNumber() && balanceString > 0) {
-          console.log("girdi");
-          console.log(balanceString);
-          isActive(false);
-        }
-      } catch (e) {
-        console.error(e);
+  const getChildInformations = async () => {
+    try {
+      const res = await getChild();
+      setChild({
+        firstName: res.firstName,
+        lastName: res.lastName,
+        balance: (res.balance || 0).toString(),
+        accessDateTimeStamp: dayjs
+          .unix(res.accessDateTimeStamp)
+          .format("DD/MM/YYYY"),
+        dateOfBirthTimeStamp: dayjs
+          .unix(res.dateOfBirthTimeStamp)
+          .format("DD/MM/YYYY"),
+      });
+      setDate(dayjs().unix());
+      let balanceString = parseInt(res.balance.toString());
+      if (date >= res.accessDateTimeStamp.toNumber() && balanceString > 0) {
+        console.log("girdi");
+        console.log(balanceString);
+        isActive(false);
       }
-    };
+    } catch (e) {
+      console.error(e);
+    }
+  };
+
+  useEffect(() => {
     getChildInformations();
   }, []);
 
